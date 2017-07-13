@@ -5,6 +5,7 @@ __pycache__/
 
 # C extensions
 *.so
+Bootstrap响应式博客后台管理模板
 
 # Distribution / packaging
 .Python
