@@ -1,5 +1,7 @@
 aiofiles==0.3.1
 httptools==0.0.9
+Jinja2==2.9.6
+MarkupSafe==1.0
 PyYAML==3.12
 sanic==0.5.4
 ujson==1.35
