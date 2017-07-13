@@ -1,10 +1,8 @@
-from server.handler.APIHandler import APIHandler
-from sanic.response import json, text
+from server.handler import BaseHandler
+from sanic.response import json, text, html
 
-class index(APIHandler):
+class index(BaseHandler):
 
     async def get(self, request):
-        print("Hello")
-        return text('hello world')
-        # print(request.args.get('appid', None))
-        # return json({'index':'indexs'})
+        render = await self.render('index.html', hello='world')
+        return html(render)
