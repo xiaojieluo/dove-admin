@@ -5,3 +5,13 @@ port: 8888
 # 工作数量
 workers: 4
 debug: false
+# 进入后台时是否需要验证帐号密码
+login_verification: true
+# 后台管理帐号与密码
+admin:
+    username: xiaojieluoff
+    password: 041000lxj
+dove:
+    cookie_prefix: 'dove_'
+    # 在字符串中加入混淆字符进行加密
+    salt: 'dove'
