@@ -1,0 +1,8 @@
+# 文章存放目录
+content_path: 'content'
+# 输出文件目录
+output_path: 'output'
+# 支持的格式
+support_format: '.md, .rst'
+# 缓存目录
+tmp_path: '.tmp'

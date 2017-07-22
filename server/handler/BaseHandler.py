@@ -2,12 +2,26 @@ from sanic.views import HTTPMethodView
 from jinja2 import TemplateNotFound
 from sanic import response
 from server import utils
-from server.web import Template
+from server.web import Template, Cookie, Database
 import functools
+from dove import Dove
+import os
+from server.database import DatabaseFactory
+from dove.settings import Setting
+from server.model import Articles_model
 
 
 class BaseHandler(HTTPMethodView):
-    pass
+
+    def __init__(self):
+        dove_conf = Setting('dove')
+
+        # dove 实例
+        self.dove = Dove(settings=dove_conf)
+        self.cookie = Cookie()
+
+        self.articles_model = Articles_model(self.dove)
+        self.articles_model.init()
 
     @classmethod
     async def authenticated(cls, request):

@@ -1,8 +1,16 @@
 from server.handler import IndexHandler as Index
 from server.handler import UserHandler as User
+from server.handler import ArticleHandler as Article
 
 route = [
-    ('/', Index.index),
-    ('/index', Index.index),
-    ('/login', User.login),
+    (r'/', Index.index),
+    (r'/index', Index.index),
+    (r'/login', User.login),
+    (r'/logout', User.logout)
+]
+
+route += [
+    (r'/articles', Article.index),
+    (r'/articles/update/<article_id:int>', Article.update),
+    (r'/articles/delete', Article.delete)
 ]

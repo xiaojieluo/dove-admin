@@ -1,9 +1,27 @@
 aiofiles==0.3.1
+certifi==2017.4.17
+chardet==3.0.4
+Cython==0.25.2
+-e git+git@github.com:xiaojieluo/dove.git@6591e7707af80d75b2d80634005230a814ce5678#egg=dove
+html2text==2016.9.19
 httptools==0.0.9
+idna==2.5
 Jinja2==2.9.6
+Markdown==2.6.8
 MarkupSafe==1.0
+mistune==0.7.4
+pkginfo==1.4.1
+py==1.4.34
+Pygments==2.2.0
+pytest==3.1.3
 PyYAML==3.12
+requests==2.18.1
+requests-toolbelt==0.8.0
+ruamel.yaml==0.15.19
 sanic==0.5.4
+tqdm==4.14.0
+twine==1.9.1
 ujson==1.35
+urllib3==1.21.1
 uvloop==0.8.0
 websockets==3.3

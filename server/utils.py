@@ -1,8 +1,10 @@
 import yaml
 import hashlib
 import os
-from server.web import CONF_PATH
+# from server.web import CONF_PATH
 
+ROOT_PATH = os.getcwd()
+CONF_PATH = os.path.join(ROOT_PATH, 'conf')
 
 def load_conf(filename, subconf=None):
     '''
@@ -19,6 +21,10 @@ def load_conf(filename, subconf=None):
         except yaml.YAMLError as exc:
             print(exc)
             return
+
+def dump(string, switch=True):
+    if switch is True:
+        print(string)
 
 
 def md5(string, salt=None):

@@ -1,17 +1,21 @@
-# 服务器地址，本机运行填 127.0.0.1
-host: '127.0.0.1'
-# 服务运行端口
+host: 127.0.0.1
 port: 8888
-# 工作数量
 workers: 4
-debug: false
-# 进入后台时是否需要验证帐号密码
+debug: true
 login_verification: true
-# 后台管理帐号与密码
+database:
+  engine: sqlite
+  # 这是注释
+  test: What the fuck!
+  sqlite:
+    #
+    db_file: server/data/server.db
+  mysql:
+    user: root
+    password: '00000000'
 admin:
-    username: xiaojieluoff
-    password: 041000lxj
+  username: xiaojieluoff
+  password: 041000lxj
 dove:
-    cookie_prefix: 'dove_'
-    # 在字符串中加入混淆字符进行加密
-    salt: 'dove'
+  cookie_prefix: dove_
+  salt: dove

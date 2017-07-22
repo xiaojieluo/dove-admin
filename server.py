@@ -1,6 +1,8 @@
 from sanic import Sanic
 from server.handler import BaseHandler
 from server import utils, route
+from dove.settings import Setting
+# from server.settings import Setting
 
 def make_app(name=__name__, route=None, settings=None):
     app = Sanic(name)
@@ -16,13 +18,13 @@ def make_app(name=__name__, route=None, settings=None):
     return app
 
 if __name__ == '__main__':
-    server_settings = utils.load_conf('server')
-    app = make_app(__name__, route=route, settings=server_settings)
+    server_conf = Setting('server')
+    app = make_app(__name__, route=route, settings=server_conf.data)
     # Serves files from the static folder to the URL /static
     app.static('/static', './server/static')
-    app.run(host=server_settings.get('host', '127.0.0.1'),
-            port=server_settings.get('port', 8888),
-            workers=server_settings.get('workers', 1),
-            debug=server_settings.get('debug', False),
+    app.run(host=server_conf.host or '127.0.0.1',
+            port=server_conf.port or 8888,
+            workers=server_conf.workers or 1,
+            debug=server_conf.debug or False,
             log_config=None
     )
