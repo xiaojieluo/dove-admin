@@ -24,4 +24,4 @@ twine==1.9.1
 ujson==1.35
 urllib3==1.21.1
 uvloop==0.8.0
-websockets==3.3
+websockets==9.1
