@@ -18,7 +18,7 @@ PyYAML==3.12
 requests==2.18.1
 requests-toolbelt==0.8.0
 ruamel.yaml==0.15.19
-sanic==0.5.4
+sanic==20.12.6
 tqdm==4.14.0
 twine==1.9.1
 ujson==1.35
