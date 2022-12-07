@@ -1,5 +1,5 @@
 aiofiles==0.3.1
-certifi==2017.4.17
+certifi==2022.12.7
 chardet==3.0.4
 Cython==0.25.2
 -e git+git@github.com:xiaojieluo/dove.git@6591e7707af80d75b2d80634005230a814ce5678#egg=dove
